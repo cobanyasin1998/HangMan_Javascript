@@ -1,4 +1,6 @@
 const word_el = document.getElementById("word");
+const popup = document.getElementById("popup-container");
+const message_el = document.getElementById("success-message");
 
 function getRandomWord() {
   const words = ["JAVASCRIPT", "JAVA", "PYTHON"];
@@ -21,9 +23,17 @@ function displayWord() {
     .join("")}
       `;
 
-      const w = word_el.innerText.replace(/\n/g,'');
-      if(w == selectedWord){
-        
-      }
+  const w = word_el.innerText.replace(/\n/g, "");
+  if (w == selectedWord) {
+    popup.style.display = flex;
+    message_el.innerText = "Tebrikler. Kazandınız";
+  }
 }
+
+window.addEventListener("keydown", function (e) {
+  if (e.keyCode >= 65 && e.keyCode <= 90) {
+
+  }
+});
+
 displayWord();
